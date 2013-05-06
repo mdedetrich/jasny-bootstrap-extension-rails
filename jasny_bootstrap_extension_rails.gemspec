@@ -7,16 +7,15 @@ require "jasny_bootstrap_extension_rails/version"
 Gem::Specification.new do |s|
   s.name        = "jasny_bootstrap_extension_rails"
   s.version     = JasnyBootstrapExtensionRails::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of JasnyBootstrapExtensionRails."
-  s.description = "TODO: Description of JasnyBootstrapExtensionRails."
+  s.authors     = ["Matthew de Detrich"]
+  s.email       = ["mdedetrich@gmail.com"]
+  s.homepage    = "https://github.com/mdedetrich/jasny-bootstrap-extension-rails/"
+  s.summary     = "Jasny-bootstrap Rails Extension"
+  s.description = "Rails 3.2+ Gem/Wrapper for http://jasny.github.io/bootstrap/"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
-  s.test_files = Dir["test/**/*"]
+  s.files         = `git ls-files`.split("\n")
+  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  s.require_paths = ["lib"]
 
-  s.add_dependency "rails", "~> 4.0.0.rc1"
-
-  s.add_development_dependency "sqlite3"
 end
